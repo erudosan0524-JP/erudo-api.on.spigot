@@ -1,4 +1,5 @@
-name: "${project.name}"
+name: "${project.artifactId}"
 version: "${project.version}"
 main: "${project.groupId}.Main"
 author: 'erudo'
+api-version: 1.16

@@ -20,7 +20,7 @@ public class OnInteract implements Listener {
     public void onPlayerInteract(PlayerInteractEvent e) {
         if (e.getAction() == Action.RIGHT_CLICK_BLOCK) {
             if (Doors.doors.contains(e.getClickedBlock().getType())) {
-                Door door = (Door) e.getClickedBlock().getState();
+                Door door = (Door) e.getClickedBlock().getState().getBlockData();
 
                 if (door.isOpen()) {
                     DoorEvent event = new DoorEvent(e.getPlayer(),true);
