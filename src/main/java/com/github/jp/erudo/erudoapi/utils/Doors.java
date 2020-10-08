@@ -8,6 +8,7 @@ import java.util.List;
 public class Doors {
 
     public static List<Material> doors = new ArrayList<Material>();
+    public static List<Material> trap_doors = new ArrayList<Material>();
 
     static {
         doors.add(Material.ACACIA_DOOR);
@@ -19,15 +20,15 @@ public class Doors {
         doors.add(Material.IRON_DOOR);
         doors.add(Material.CRIMSON_DOOR);
         doors.add(Material.WARPED_DOOR);
-        doors.add(Material.DARK_OAK_TRAPDOOR);
-        doors.add(Material.ACACIA_TRAPDOOR);
-        doors.add(Material.BIRCH_TRAPDOOR);
-        doors.add(Material.CRIMSON_TRAPDOOR);
-        doors.add(Material.IRON_TRAPDOOR);
-        doors.add(Material.JUNGLE_TRAPDOOR);
-        doors.add(Material.OAK_TRAPDOOR);
-        doors.add(Material.SPRUCE_TRAPDOOR);
-        doors.add(Material.WARPED_TRAPDOOR);
+        trap_doors.add(Material.DARK_OAK_TRAPDOOR);
+        trap_doors.add(Material.ACACIA_TRAPDOOR);
+        trap_doors.add(Material.BIRCH_TRAPDOOR);
+        trap_doors.add(Material.CRIMSON_TRAPDOOR);
+        trap_doors.add(Material.IRON_TRAPDOOR);
+        trap_doors.add(Material.JUNGLE_TRAPDOOR);
+        trap_doors.add(Material.OAK_TRAPDOOR);
+        trap_doors.add(Material.SPRUCE_TRAPDOOR);
+        trap_doors.add(Material.WARPED_TRAPDOOR);
     }
 
 
