@@ -11,7 +11,15 @@
         <java.version>1.8</java.version>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
+        <github.global.server>github</github.global.server>
     </properties>
+    <distributionManagement>
+        <repository>
+            <id>erudoapi</id>
+            <name>erudo-api</name>
+            <url>file://${project.build.directory}/mvn-repo</url>
+        </repository>
+    </distributionManagement>
     <repositories>
         <!-- This adds the Spigot Maven repository to the build -->
         <repository>
@@ -49,5 +57,45 @@
                 <directory>src/main/resources/</directory>
             </resource>
         </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>0.12</version>
+                <configuration>
+                    <!-- Git commit message -->
+                    <message>Maven artifacts for ${project.version}</message>
+                    <noJekyll>true</noJekyll>
+
+                    <!-- distributionManagement の url と一致させる -->
+                    <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
+                    <branch>refs/heads/mvn-repo</branch>
+                    <includes><include>**/*</include></includes>
+
+                    <!-- Github リポジトリ名 -->
+                    <repositoryName>erudo-api.on.spigot</repositoryName>
+                    <repositoryOwner>erudosan0524-JP</repositoryOwner>
+
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>deploy</phase>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
     </build>
+
 </project>
