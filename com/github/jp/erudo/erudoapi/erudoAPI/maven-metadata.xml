@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.github.jp.erudo.erudoapi</groupId>
+  <artifactId>erudoAPI</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20201008120111</lastUpdated>
+  </versioning>
+</metadata>
