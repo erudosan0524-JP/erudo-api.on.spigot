@@ -18,7 +18,7 @@ public class OnInteract implements Listener {
     }
 
     @EventHandler
-    public void onPlayerInteract(PlayerInteractEvent e) {
+    private void onPlayerInteract(PlayerInteractEvent e) {
         if (e.getAction() == Action.RIGHT_CLICK_BLOCK) {
             if (Doors.doors.contains(e.getClickedBlock().getType())) {
                 Door door = (Door) e.getClickedBlock().getState().getBlockData();
@@ -46,12 +46,4 @@ public class OnInteract implements Listener {
         }
     }
 
-    @EventHandler
-    public void onDoor(DoorEvent e) {
-        if (e.isOpen()) {
-            e.getPlayer().sendMessage("Door is opened");
-        } else {
-            e.getPlayer().sendMessage("door is closed");
-        }
-    }
 }
